@@ -26,13 +26,19 @@ pipeline {
 
         stage('Install Serverless') {
             steps {
-                // Add your serverless installation steps here
+                script {
+                    // Add your serverless installation steps here
+                    // Example: npm install -g serverless
+                }
             }
         }
 
         stage('Deploy to AWS') {
             steps {
-                // Add your AWS deployment steps here
+                script {
+                    // Add your AWS deployment steps here
+                    // Example: serverless deploy
+                }
             }
         }
     }
@@ -43,4 +49,5 @@ pipeline {
         }
     }
 }
+
 
