@@ -27,27 +27,10 @@ pipeline {
         stage('Install Serverless') {
             steps {
                 script {
-                    // Add your serverless installation steps here
-                    // Example: npm install -g serverless
+                    sh 'npm install -g serverless'
                 }
             }
-        }
+        }       
 
-        stage('Deploy to AWS') {
-            steps {
-                script {
-                    // Add your AWS deployment steps here
-                    // Example: serverless deploy
-                }
-            }
-        }
-    }
-
-    post {
-        failure {
-            echo 'One or more stages failed!'
-        }
-    }
-}
 
 
