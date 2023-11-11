@@ -7,7 +7,7 @@ pipeline {
                 checkout scm
             }
         }
-        stage('Install Serverless') {
+        stage('Install nvm') {
             steps {
                 script {
                     sh 'nvm install 14'
