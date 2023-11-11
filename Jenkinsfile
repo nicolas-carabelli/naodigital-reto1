@@ -11,7 +11,7 @@ pipeline {
         stage('Install Serverless') {
             steps {
                 script {
-                    sh 'npm install -g serverless'
+                    sh 'npm install serverless'
                 }
             }
         }
