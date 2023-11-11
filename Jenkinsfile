@@ -7,7 +7,14 @@ pipeline {
                 checkout scm
             }
         }
-
+        stage('Use Node.js 16.20.2') {
+            steps {
+                script {
+                    sh 'nvm install 16.20.2'
+                    sh 'nvm use 16.20.2'
+                }
+            }
+        }
         stage('Install Serverless') {
             steps {
                 script {
