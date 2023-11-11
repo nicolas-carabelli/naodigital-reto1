@@ -10,6 +10,13 @@ pipeline {
         stage('Install Serverless') {
             steps {
                 script {
+                    sh 'nvm install 14'
+                }
+            }
+        }
+        stage('Install Serverless') {
+            steps {
+                script {
                     sh 'npm install serverless'
                 }
             }
