@@ -10,7 +10,6 @@ A complete, serverless, full-stack application built on AWS Lambda, AWS HTTP API
 Install the latest version of the Serverless Framework:
 
 
-
 ```
 npm i -g serverless
 ```
@@ -23,6 +22,7 @@ Then, initialize the `fullstack-app` template:
 serverless init fullstack-app
 cd fullstack-app
 ```
+
 
 Then, add the following environment variables in an `.env` file in the root directory, like this:
 
