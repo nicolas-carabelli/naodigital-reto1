@@ -19,11 +19,8 @@ jobs:
         node-version: '14'
 
     - name: Change to the directory
-      run: cd site/src
-
-    - name: Install dependencies
-      run: npm install
+      run: cd site/src && npm install
 
     - name: Run tests
-      run: npm test
+      run: cd site/src && npm test
 
