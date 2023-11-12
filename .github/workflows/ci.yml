@@ -1,31 +1,69 @@
 name: CI
 
-on: [pull_request]
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
-  test:
+  build_api:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
+    - name: Checkout Repository
       uses: actions/checkout@v2
 
-    - name: Set up Node.js
+    - name: Set Up Node.js
       uses: actions/setup-node@v2
       with:
-        node-version: '14'
+        node-version: 14
 
-    - name: Install dependencies
+    - name: Install API Dependencies
+      run: |
+        cd api
+        npm install
+
+    - name: Run API Tests
+      run: |
+        cd api
+        npm test
+
+    - name: Serverless Deploy
+      run: |
+        cd api
+        npx serverless deploy
+
+  build_site:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Set Up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: 14
+
+    - name: Install Site Dependencies
       run: |
         cd site
         npm install
-      working-directory: naodigital-reto1
 
-    - name: Run site tests
+    - name: Run Site Tests
       run: |
         cd site
-        npx react-scripts test
-      working-directory: naodigital-reto1
+        npm test
+
+    - name: Build Site
+      run: |
+        cd site
+        npm run build
+
+
 
 
 
