@@ -34,6 +34,7 @@ tokenSecret=yourSecretKey
 domain=serverless-fullstack-app.com
 ```
 
+
 In the root folder of the project, run `serverless deploy`
 
 Lastly, you will need to add your API domain manually to your React application in `./site/src/config.js`, so that you interact with your serverless Express.js back-end.  You can find the your API url by going into `./api` and running `serverless info` and copying the `url:` value.  It should look something like this `https://9jfalnal19.execute-api.us-east-1.amazonaws.com` or it will look like the custom domain you have set.
