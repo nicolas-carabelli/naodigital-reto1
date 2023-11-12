@@ -18,8 +18,13 @@ jobs:
     - name: Install dependencies
       run: npm install
 
+    - name: Install site dependencies
+      working-directory: site
+      run: npm install
+
     - name: Run site tests
       working-directory: site
       run: npm test
+
 
 
