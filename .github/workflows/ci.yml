@@ -18,6 +18,17 @@ jobs:
     - name: Install dependencies
       run: npm install
 
+    - name: Debug info
+      run: |
+        pwd
+        ls -la
+        cd site
+        pwd
+        ls -la
+
+    - name: Install global react-scripts
+      run: npm install -g react-scripts
+
     - name: Install site dependencies
       working-directory: site
       run: npm install
