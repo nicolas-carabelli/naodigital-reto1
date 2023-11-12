@@ -1,16 +1,13 @@
 name: CI
 
-on:
-  pull_request:
-    branches:
-      - master
+on: [pull_request]
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
+    - name: Checkout code
       uses: actions/checkout@v2
 
     - name: Set up Node.js
@@ -18,9 +15,10 @@ jobs:
       with:
         node-version: '14'
 
-    - name: Change to the directory
-      run: cd site/src && npm install
+    - name: Install dependencies
+      run: npm install
 
     - name: Run tests
-      run: cd site/src && npm test
+      run: npm test
+
 
