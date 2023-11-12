@@ -18,7 +18,8 @@ jobs:
     - name: Install dependencies
       run: npm install
 
-    - name: Run tests
+    - name: Run site tests
+      working-directory: site
       run: npm test
 
 
