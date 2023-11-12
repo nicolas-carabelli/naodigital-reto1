@@ -23,11 +23,10 @@ jobs:
         pwd
         ls -la
 
-    - name: Install site dependencies
+    - name: Install dependencies
+      run: npm install
       working-directory: site
-      run: |
-        npm install
-        npm install react-scripts@3.4.3
+      run: npm install
 
     - name: Run site tests
       working-directory: site
