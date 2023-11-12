@@ -16,6 +16,7 @@ export default class App extends Component {
     this.state = {}
   }
 
+  
   async componentDidMount() {
     // console.log(getSession())
   }
