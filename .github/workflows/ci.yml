@@ -15,22 +15,17 @@ jobs:
       with:
         node-version: '14'
 
-    - name: Debug info
-      run: |
-        pwd
-        ls -la
-        cd site
-        pwd
-        ls -la
-
     - name: Install dependencies
-      run: npm install
-      working-directory: site
-      run: npm install
+      run: |
+        cd site
+        npm install
+      working-directory: naodigital-reto1
 
     - name: Run site tests
-      working-directory: site
-      run: npx react-scripts test
+      run: |
+        cd site
+        npx react-scripts test
+      working-directory: naodigital-reto1
 
 
 
