@@ -53,6 +53,16 @@ jobs:
         cd site
         npm install
 
+    - name: Check package.json
+      run: |
+        cd site
+        cat package.json
+
+    - name: Debugging
+      run: |
+        pwd
+        ls
+
     - name: Run Site Tests
       run: |
         cd site
