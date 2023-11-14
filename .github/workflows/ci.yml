@@ -19,13 +19,19 @@ jobs:
         node-version: '14'
 
     - name: Install dependencies
-      run: npm install
+      run: |
+        cd site
+        npm install
 
     - name: Run tests
-      run: npm test
+      run: |
+        cd site
+        npm test
 
     - name: Run ESLint
-      run: npm run lint
+      run: |
+        cd site
+        npm run lint
 
 
 
