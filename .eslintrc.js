@@ -6,7 +6,7 @@ module.exports = {
   },
   extends: 'eslint:recommended',
   parserOptions: {
-    ecmaVersion: 2018, // Indica la versión de ECMAScript que se utiliza
-    sourceType: 'module', // Especifica el tipo de código ECMAScript que estás utilizando (por ejemplo, módulos)
+    ecmaVersion: 2018, 
+    sourceType: 'module',
   },
 };
