@@ -5,10 +5,8 @@ module.exports = {
     node: true,
   },
   extends: 'eslint:recommended',
-  rules: {
-    'indent': ['error', 2],
-    'semi': ['error', 'always'],
-    'quotes': ['error', 'single'],
-    // Otras reglas aquí
+  parserOptions: {
+    ecmaVersion: 2018, // Indica la versión de ECMAScript que se utiliza
+    sourceType: 'module', // Especifica el tipo de código ECMAScript que estás utilizando (por ejemplo, módulos)
   },
 };
