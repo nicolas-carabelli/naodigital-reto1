@@ -1,14 +1,11 @@
-# Usa una imagen de Node.js como base
-FROM node:14
+# Use a base image
+FROM node:14-alpine
 
-# Directorio de trabajo en el contenedor
-WORKDIR /usr/src/app
+# Copiar la función lambda al directorio /app
+COPY funcion_lambda.js /app/
 
-# Copia el archivo de la función en el contenedor
-COPY funcion_lambda.js .
+# Establecer el directorio de trabajo
+WORKDIR /app
 
-# Instala las dependencias si las hubiera
-# RUN npm install
-
-# Define el comando para ejecutar la función
+# Ejecutar el comando para iniciar la función lambda
 CMD ["node", "funcion_lambda.js"]
