@@ -1,0 +1,14 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Despliegue de una función Lambda 
+
+Resources:
+  MyLambdaFunction:
+    Type: AWS::Lambda::Function
+    Properties:
+      Handler: index.handler
+      Role: arn:aws:iam::714715362869:role/lambdarole
+      Code:
+        S3Bucket: naodigitallambda
+        S3Key: lambda_function.zip
+      Runtime: nodejs14.x
+      Timeout: 30
