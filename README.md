@@ -26,6 +26,7 @@ cd fullstack-app
 
 Then, add the following environment variables in an `.env` file in the root directory, like this:
 
+
 ```text
 # This signs you JWT tokens used for auth.  Enter a random string in here that's ~40 characters in length.
 tokenSecret=yourSecretKey
