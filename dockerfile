@@ -10,3 +10,4 @@ COPY index.js .
 # Comando para ejecutar la función (puede variar según tu función)
 CMD ["node", "index.js"]
 
+
