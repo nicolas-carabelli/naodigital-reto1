@@ -18,6 +18,7 @@ After installation, make sure you connect your AWS account by setting a provider
 
 Then, initialize the `fullstack-app` template:
 
+
 ```
 serverless init fullstack-app
 cd fullstack-app
