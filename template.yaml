@@ -12,4 +12,3 @@ Resources:
         S3Key: lambda_function.zip
       Runtime: nodejs14.x
       Timeout: 30
-
