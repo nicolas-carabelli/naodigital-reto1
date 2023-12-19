@@ -13,5 +13,3 @@ Resources:
       Runtime: nodejs14.x
       Timeout: 30
       
-
-
