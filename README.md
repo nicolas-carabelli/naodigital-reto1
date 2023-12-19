@@ -30,6 +30,7 @@ Then, add the following environment variables in an `.env` file in the root dire
 # This signs you JWT tokens used for auth.  Enter a random string in here that's ~40 characters in length.
 tokenSecret=yourSecretKey
 
+
 # Only add this if you want a custom domain.  Purchase it on AWS Route53 in your target AWS account first.
 domain=serverless-fullstack-app.com
 ```
